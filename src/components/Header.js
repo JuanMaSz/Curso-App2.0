@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         fontWeight: "600",
         color: colors.heavyPurple,
+        fontFamily: "Bodoni",
     }
 
 })

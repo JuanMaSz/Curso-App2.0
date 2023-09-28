@@ -1,13 +1,14 @@
 import { Pressable, StyleSheet, Text, TextInput, View, } from 'react-native'
 import React from 'react'
 import { useState } from 'react';
-import { AntDesign } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons'; 
 import { colors } from '../theme/colors';
 
 const Search = ({ text, setText }) => {
 
+
     const clearText = () =>{
-        setText(null);
+        setText("");
     };
 
 
@@ -19,7 +20,7 @@ return (
     style={styles.inputText}
     placeholder='Busca un producto aquí..'/>
     <Pressable onPress={() => clearText()}>
-    <AntDesign name="closesquareo" size={30} color="black" />
+    <Entypo name="cross" size={30} color="black" />
     </Pressable>
     </View>
 )
