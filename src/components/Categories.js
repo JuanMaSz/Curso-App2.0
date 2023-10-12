@@ -4,14 +4,10 @@ import { categories } from '../data/categories.js'
 import CategoryItem from './CategoryItem'
 import { colors } from '../theme/colors.js'
 
-const Categories = () => {
+const Categories = ({ navigation }) => {
 return (
     <View style={styles.container}>
-    <FlatList style={styles.container}
-    data = {categories}
-    keyExtractor={(key) => key}
-    renderItem={({ item}) => <CategoryItem item={item}/>}
-    />
+    
     </View>
 )
 }
@@ -19,10 +15,6 @@ return (
 export default Categories
 
 const styles = StyleSheet.create({
-    container: {
-        width: '100%',
-        backgroundColor: colors.heavyPurple,
-        
-    },
+   
 
 })

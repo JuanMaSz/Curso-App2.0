@@ -1,9 +1,10 @@
-import { View, Text, StyleSheet, Image, Button } from 'react-native'
+import { SafeAreaView, Text, StyleSheet, Image, Button, Pressable } from 'react-native'
 import React from 'react'
 import Header from '../components/Header'
 import { products } from '../data/products'
+import { Ionicons } from '@expo/vector-icons';
 
-const ProductDetail = () => {
+const ProductDetail = ({ navigation }) => {
 
 
     const initialProd = products[0];
@@ -12,9 +13,12 @@ const ProductDetail = () => {
 
 
 return (
-    <View>
+    <SafeAreaView style={styles.container}>
     <Header title="Detalle" />
-    <View style={styles.container}>
+    <Pressable onPress={() => navigation.goBack() }>
+    <Ionicons name="arrow-back-outline" size={24} color="black" />
+        </Pressable>
+    
     <Image style={styles.image}
     source={{
         uri: initialProd.images[2]
@@ -24,8 +28,8 @@ return (
     <Text style={styles.description}> Rating: {initialProd.rating} </Text>
     <Text style={styles.description}> Precio: {initialProd.price} </Text>
     <Button title='Agregar al carrito'/>
-    </View>
-    </View>
+    
+    </SafeAreaView>
 )
 };
 

@@ -9,6 +9,7 @@ import { useFonts } from 'expo-font';
 import ProductDetail from './src/screens/ProductDetail.js';
 import { NavigationContainer } from '@react-navigation/native';
 import RootNavigation from './src/navigation/RootNavigation.js';
+import TabNav from './src/navigation/TabNav.js';
 
 export default function App() {
 
@@ -22,7 +23,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <RootNavigation/>
+      <TabNav/>
     </NavigationContainer>
   );
 }

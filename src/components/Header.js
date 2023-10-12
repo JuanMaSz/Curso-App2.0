@@ -1,9 +1,9 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import {colors} from '../theme/colors.js'
 
 
-const Header = ({ title }) => {
+const Header = ({ title, navigation }) => {
 return (
     <View style = {styles.container}>
 <Text style = {styles.text}> {title} </Text>

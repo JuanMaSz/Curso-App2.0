@@ -2,9 +2,9 @@ import { Pressable, StyleSheet, Text, TouchableWithoutFeedback, View } from 'rea
 import React from 'react'
 import { colors } from '../theme/colors';
 
-const CategoryItem = ({ item }) => {
+const CategoryItem = ({ item, navigation }) => {
 return (
-    <Pressable onPress={() => console.log("botón funciona..")}>
+    <Pressable onPress={() => navigation.navigate("products", { item: item}) }>
         <Text style={styles.textList}>{item}</Text>
     </Pressable>
 )};

@@ -5,6 +5,7 @@ import Home from '../screens/Home'
 
 import ProductDetail from '../screens/ProductDetail'
 import Products from '../screens/Products'
+import Header from '../components/Header'
 
 const Stack = createNativeStackNavigator()
 
